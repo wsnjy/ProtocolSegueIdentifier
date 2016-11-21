@@ -8,18 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SegueHandlerType {
+    
+    enum SegueIdentifier: String {
+        case FallinInLoveWithWulan
+        case FallinInLoveWithSophia
+    }
 
+    @IBOutlet weak var width: NSLayoutConstraint!
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        width.constant = self.view.frame.width/2
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        switch segueIdentifierForSegue(segue) {
+        case .FallinInLoveWithWulan:
+            
+            let wulanVC = segue.destination as? WulanViewController
+            wulanVC?.inject("This is Wulan's daughter")
+        
+        case .FallinInLoveWithSophia:
+        
+            let sophiaVC = segue.destination as? SophiaViewController
+            sophiaVC?.inject("This is Sophia's daughter")
+        
+        }
+        
+    }
+    
+    @IBAction func tapWulanAction(_ sender: Any) {
+        performSegueWithIdentifier(.FallinInLoveWithWulan, sender: self)
     }
 
-
+    @IBAction func tapSophiaAction(_ sender: Any) {
+        performSegueWithIdentifier(.FallinInLoveWithSophia, sender: self)
+    }
+    
+    
 }
 

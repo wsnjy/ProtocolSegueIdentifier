@@ -12,6 +12,9 @@
 		658069061DE2E3210076BC21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658069041DE2E3210076BC21 /* Main.storyboard */; };
 		658069081DE2E3210076BC21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658069071DE2E3210076BC21 /* Assets.xcassets */; };
 		6580690B1DE2E3210076BC21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 658069091DE2E3210076BC21 /* LaunchScreen.storyboard */; };
+		658069131DE300860076BC21 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658069121DE300860076BC21 /* SegueHandlerType.swift */; };
+		658069151DE308180076BC21 /* WulanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658069141DE308180076BC21 /* WulanViewController.swift */; };
+		658069171DE308250076BC21 /* SophiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658069161DE308250076BC21 /* SophiaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		658069071DE2E3210076BC21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6580690A1DE2E3210076BC21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6580690C1DE2E3210076BC21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		658069121DE300860076BC21 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		658069141DE308180076BC21 /* WulanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WulanViewController.swift; sourceTree = "<group>"; };
+		658069161DE308250076BC21 /* SophiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SophiaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 			children = (
 				658069001DE2E3210076BC21 /* AppDelegate.swift */,
 				658069021DE2E3210076BC21 /* ViewController.swift */,
+				658069141DE308180076BC21 /* WulanViewController.swift */,
+				658069161DE308250076BC21 /* SophiaViewController.swift */,
+				658069121DE300860076BC21 /* SegueHandlerType.swift */,
 				658069041DE2E3210076BC21 /* Main.storyboard */,
 				658069071DE2E3210076BC21 /* Assets.xcassets */,
 				658069091DE2E3210076BC21 /* LaunchScreen.storyboard */,
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658069171DE308250076BC21 /* SophiaViewController.swift in Sources */,
 				658069031DE2E3210076BC21 /* ViewController.swift in Sources */,
+				658069131DE300860076BC21 /* SegueHandlerType.swift in Sources */,
+				658069151DE308180076BC21 /* WulanViewController.swift in Sources */,
 				658069011DE2E3210076BC21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

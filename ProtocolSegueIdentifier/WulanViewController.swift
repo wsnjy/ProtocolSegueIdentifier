@@ -8,28 +8,42 @@
 
 import UIKit
 
-class WulanViewController: UIViewController {
+protocol InjectText {
+ 
+    associatedtype T
+    func inject(_ text: T)
+    func assertDependencies()
 
+}
+
+class WulanViewController: UIViewController, InjectText {
+
+    @IBOutlet weak var label: UILabel!
+    
+    typealias T = String
+    
+    private var textLabel: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        assertDependencies()
+        
+        label.text = textLabel
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func inject(_ text: T) {
+        
+        textLabel = text
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func assertDependencies() {
+        
+        assert(textLabel != nil)
+    
     }
-    */
-
+    
 }

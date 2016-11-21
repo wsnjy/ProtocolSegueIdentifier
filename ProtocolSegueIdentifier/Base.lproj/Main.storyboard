@@ -1,26 +1,200 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YmR-H1-dQl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="RET-ZZ-klR">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="YmR-H1-dQl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yHp-cf-N9h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mNC-ku-6Ti" kind="relationship" relationship="rootViewController" id="MxF-fc-QqW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZsH-jq-4fP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="-5"/>
+        </scene>
+        <!--MILF Battle-->
+        <scene sceneID="Dmi-ct-JTE">
+            <objects>
+                <viewController id="mNC-ku-6Ti" customClass="ViewController" customModule="ProtocolSegueIdentifier" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="XUM-Yx-Ml1"/>
+                        <viewControllerLayoutGuide type="bottom" id="feJ-Lm-jug"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="QGX-x4-g5L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wulan" translatesAutoresizingMaskIntoConstraints="NO" id="LO9-DF-Jiq">
+                                <rect key="frame" x="0.0" y="184.5" width="188" height="203"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="PLu-6r-ohK"/>
+                                    <constraint firstAttribute="height" constant="203" id="aTJ-vx-0Xf"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jJj-iZ-y8c" appends="YES" id="xTV-34-WAZ"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wulan Guritno vs Sophia Latjuba" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-fs-gqJ">
+                                <rect key="frame" x="16" y="114" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sophia" translatesAutoresizingMaskIntoConstraints="NO" id="5DN-3b-Cve">
+                                <rect key="frame" x="187" y="184.5" width="188" height="203"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="itU-5N-Aw1"/>
+                                    <constraint firstAttribute="width" constant="188" id="s1z-aX-hGq"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RPX-eY-Grs" appends="YES" id="96g-r9-C2X"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5DN-3b-Cve" firstAttribute="leading" secondItem="LO9-DF-Jiq" secondAttribute="trailing" constant="-1" id="B8e-Dx-zyw"/>
+                            <constraint firstItem="LO9-DF-Jiq" firstAttribute="top" secondItem="R3S-fs-gqJ" secondAttribute="bottom" constant="50" id="FZ9-wk-V3z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5DN-3b-Cve" secondAttribute="trailing" constant="-16" id="Je4-Eg-KQs"/>
+                            <constraint firstItem="5DN-3b-Cve" firstAttribute="top" secondItem="R3S-fs-gqJ" secondAttribute="bottom" constant="50" id="Rwy-Sg-iFL"/>
+                            <constraint firstItem="R3S-fs-gqJ" firstAttribute="top" secondItem="XUM-Yx-Ml1" secondAttribute="bottom" constant="50" id="UcA-GD-cpM"/>
+                            <constraint firstItem="R3S-fs-gqJ" firstAttribute="trailing" secondItem="QGX-x4-g5L" secondAttribute="trailingMargin" id="rtu-1J-pdZ"/>
+                            <constraint firstItem="R3S-fs-gqJ" firstAttribute="leading" secondItem="QGX-x4-g5L" secondAttribute="leadingMargin" id="u1c-YN-0VV"/>
+                            <constraint firstItem="LO9-DF-Jiq" firstAttribute="leading" secondItem="QGX-x4-g5L" secondAttribute="leadingMargin" constant="-16" id="wte-1F-f7r"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="MILF Battle" id="2DK-EG-fZJ"/>
+                    <connections>
+                        <outlet property="width" destination="PLu-6r-ohK" id="Hxw-yJ-hc1"/>
+                        <segue destination="jYp-IN-Nv3" kind="show" identifier="FallinInLoveWithWulan" id="i4H-nx-aQB"/>
+                        <segue destination="9oO-7g-Do0" kind="show" identifier="FallinInLoveWithSophia" id="DZ7-dl-0a7"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Roq-jo-kxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jJj-iZ-y8c" userLabel="tapWulan">
+                    <connections>
+                        <action selector="tapWulanAction:" destination="mNC-ku-6Ti" id="AQs-NO-dTy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="RPX-eY-Grs" userLabel="tapSophia">
+                    <connections>
+                        <action selector="tapSophiaAction:" destination="mNC-ku-6Ti" id="Mvi-mB-soW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="-6.746626686656672"/>
+        </scene>
+        <!--Shalom Razade-->
+        <scene sceneID="CAp-KU-VDD">
+            <objects>
+                <viewController title="Shalom Razade" id="jYp-IN-Nv3" customClass="WulanViewController" customModule="ProtocolSegueIdentifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zjp-Ej-ANe"/>
+                        <viewControllerLayoutGuide type="bottom" id="UdO-d7-b6g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FCf-Wo-G2M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shaloom" translatesAutoresizingMaskIntoConstraints="NO" id="97q-vu-w8s">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jW-N6-hsG">
+                                <rect key="frame" x="0.0" y="317" width="375" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ulJ-Ke-apF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="97q-vu-w8s" secondAttribute="trailing" id="Btp-Ui-aIk"/>
+                            <constraint firstItem="97q-vu-w8s" firstAttribute="leading" secondItem="FCf-Wo-G2M" secondAttribute="leading" id="Cgo-5s-9QO"/>
+                            <constraint firstItem="1jW-N6-hsG" firstAttribute="leading" secondItem="FCf-Wo-G2M" secondAttribute="leadingMargin" constant="-16" id="cTA-CD-Gca"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1jW-N6-hsG" secondAttribute="trailing" constant="-16" id="ieT-45-QmH"/>
+                            <constraint firstItem="1jW-N6-hsG" firstAttribute="centerY" secondItem="FCf-Wo-G2M" secondAttribute="centerY" id="lWw-P9-det"/>
+                            <constraint firstItem="UdO-d7-b6g" firstAttribute="top" secondItem="97q-vu-w8s" secondAttribute="bottom" id="mgN-1U-a0H"/>
+                            <constraint firstItem="97q-vu-w8s" firstAttribute="top" secondItem="Zjp-Ej-ANe" secondAttribute="bottom" id="xCi-Ht-hVY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="1jW-N6-hsG" id="JCU-yQ-ilo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1u-wk-J3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="-111.0944527736132"/>
+        </scene>
+        <!--Eva Celia-->
+        <scene sceneID="b8p-Hq-5MV">
+            <objects>
+                <viewController title="Eva Celia" id="9oO-7g-Do0" customClass="SophiaViewController" customModule="ProtocolSegueIdentifier" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4V4-Lg-Z1T"/>
+                        <viewControllerLayoutGuide type="bottom" id="dKf-xr-Yzk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZDh-nr-h7C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eva" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-dW-eIq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2z-dy-Lj4">
+                                <rect key="frame" x="0.0" y="317" width="375" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="EN8-ym-OOK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oMx-dW-eIq" firstAttribute="leading" secondItem="ZDh-nr-h7C" secondAttribute="leading" id="4T6-tf-uP0"/>
+                            <constraint firstItem="dKf-xr-Yzk" firstAttribute="top" secondItem="oMx-dW-eIq" secondAttribute="bottom" id="Q5h-a4-TcU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="V2z-dy-Lj4" secondAttribute="trailing" constant="-16" id="X3K-be-vTO"/>
+                            <constraint firstAttribute="trailing" secondItem="oMx-dW-eIq" secondAttribute="trailing" id="h6j-9z-FwS"/>
+                            <constraint firstItem="V2z-dy-Lj4" firstAttribute="leading" secondItem="ZDh-nr-h7C" secondAttribute="leadingMargin" constant="-16" id="rSI-Q3-PKS"/>
+                            <constraint firstItem="V2z-dy-Lj4" firstAttribute="centerY" secondItem="ZDh-nr-h7C" secondAttribute="centerY" id="tHR-q5-42g"/>
+                            <constraint firstItem="oMx-dW-eIq" firstAttribute="top" secondItem="4V4-Lg-Z1T" secondAttribute="bottom" id="uJN-mQ-WcA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="V2z-dy-Lj4" id="Tya-4p-izz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fE-6w-6bQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="581.55922038980509"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="eva" width="600" height="800"/>
+        <image name="shaloom" width="640" height="799"/>
+        <image name="sophia" width="500" height="544"/>
+        <image name="wulan" width="770" height="1026"/>
+    </resources>
 </document>
